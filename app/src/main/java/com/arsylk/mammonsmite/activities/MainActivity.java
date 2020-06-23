@@ -315,6 +315,10 @@ public class MainActivity extends ActivityWithExceptionRedirect implements Navig
                 break;
             case R.id.discord_open:
                 openDiscord();
+                break;
+            case R.id.fork_of_arsylk_open:
+                openForkOfArsylk();
+                break;
         }
 
         if(drawerLayout.isDrawerOpen(Gravity.START)) {
@@ -547,6 +551,10 @@ public class MainActivity extends ActivityWithExceptionRedirect implements Navig
     }
 
     private void openDiscord() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/wDdq7C8")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://discord.gg/2vew9te")));
+    }
+
+    private void openForkOfArsylk() {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Arsylk/destiny-child-tools-kr-apk")));
     }
 }

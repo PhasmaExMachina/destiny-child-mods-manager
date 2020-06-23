@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mammon\'s Mite</string>
+    <string name="app_name">Destiny Child Mod Manager</string>
 
     <string name="disclaimer_title">** ! DISCLAIMER ! **</string>
     <string name="disclaimer_message">This is really experimental, might and probably will cause problems.\nYou can test
@@ -92,6 +92,7 @@
 
     <string name="markup_arrow_right">=></string>
 
+    <string name="user_arsylk">Arsylk</string>
     <string name="user_whocares">Whocares8128</string>
     <string name="user_banana">TinyBanana</string>
     <string name="user_envy">Envy</string>
@@ -106,4 +107,5 @@
     <string name="text_japan">Japan</string>
     <string name="text_settings">Settings</string>
     <string name="activity_uncaught_exception">Uncaught Exception</string>
+    <string name="fork_of_arsylk">Forked from Mammon\'s Might</string>
 </resources>

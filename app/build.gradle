@@ -10,24 +10,24 @@ android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
     defaultConfig {
-        applicationId 'com.Arsylk.MammonsMite'
+        applicationId 'com.phasmaexmachina.dcmodmanager'
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 9
-        versionName '1.8'
+        versionName '0.1'
     }
-    signingConfigs {
-        def keystoreProperties = new Properties()
-        keystoreProperties.load(new FileInputStream(rootProject.file('keystore.properties')))
-        release {
-            keyAlias keystoreProperties.getProperty('keyAlias')
-            keyPassword keystoreProperties.getProperty('keyPassword')
-            storeFile file(keystoreProperties.getProperty('storeFile'))
-            storePassword keystoreProperties.getProperty('storePassword')
-        }
-    }
+//    signingConfigs {
+//        def keystoreProperties = new Properties()
+//        keystoreProperties.load(new FileInputStream(rootProject.file('keystore.properties')))
+//        release {
+//            keyAlias keystoreProperties.getProperty('keyAlias')
+//            keyPassword keystoreProperties.getProperty('keyPassword')
+//            storeFile file(keystoreProperties.getProperty('storeFile'))
+//            storePassword keystoreProperties.getProperty('storePassword')
+//        }
+//    }
     applicationVariants.all { variant ->
-        if (variant.name == 'github' || variant.name == 'googleplay') {
+        if (variant.name == 'github') {
             variant.outputs.all { output ->
                 def dateFormat = new Date().format('dd.MM.yyyy')
                 output.outputFileName = "app-${variant.name}-v${variant.versionName}_${dateFormat}.apk"
@@ -37,21 +37,21 @@ android {
     buildTypes {
         debug {
             debuggable true
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             resValue('string', 'isSpecial', 'true')
         }
         release {
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             resValue('string', 'isSpecial', 'true')
         }
-        googleplay {
-            signingConfig signingConfigs.release
-            minifyEnabled true
-            shrinkResources true
-            resValue('string', 'isSpecial', 'false')
-        }
+//        googleplay {
+//            signingConfig signingConfigs.release
+//            minifyEnabled true
+//            shrinkResources true
+//            resValue('string', 'isSpecial', 'false')
+//        }
         github {
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             minifyEnabled false
             shrinkResources false
             resValue('string', 'isSpecial', 'true')
