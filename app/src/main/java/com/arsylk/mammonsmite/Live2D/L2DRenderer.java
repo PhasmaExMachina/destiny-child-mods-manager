@@ -122,7 +122,7 @@ public class L2DRenderer implements GLSurfaceView.Renderer {
         }
 
         //draw background
-        background.draw(gl);
+//        background.draw(gl);
 
         //moves gl after drawing bg
         gl.glTranslatef(config.getModelOffsetX(), config.getModelOffsetY(), 0.0f);
